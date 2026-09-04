@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #171717;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 800;
+  color: #111;
+}
+
+.logo span {
+  color: #6c4cff;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f4f1ff, #ffffff);
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 30px;
+  background: #e9e4ff;
+  color: #5b3fd1;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 8vw, 70px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #6c4cff;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #666;
+  font-size: 18px;
+}
+
+.hero-button,
+.generate-button,
+.download-button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.hero-button {
+  margin-top: 30px;
+  padding: 15px 25px;
+  background: #6c4cff;
+  color: white;
+}
+
+.generator-section,
+.benefits,
+.steps,
+.faq {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 35px;
+}
+
+.generator-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  background: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.06);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  font-size: 15px;
+  background: white;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.type-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.type-btn {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 9px 13px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.type-btn.active {
+  background: #6c4cff;
+  color: white;
+  border-color: #6c4cff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.customization {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+.customization h3 {
+  margin-bottom: 15px;
+}
+
+.color-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.color-control {
+  flex: 1;
+}
+
+.color-control input {
+  height: 45px;
+  padding: 3px;
+}
+
+.generate-button {
+  width: 100%;
+  padding: 15px;
+  background: #6c4cff;
+  color: white;
+  font-size: 16px;
+}
+
+.preview {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+}
+
+.preview-title {
+  margin-bottom: 10px;
+}
+
+#status {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.qr-container {
+  min-height: 270px;
+  min-width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-placeholder {
+  width: 220px;
+  height: 220px;
+  border: 3px dashed #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.qr-container img,
+.qr-container canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.download-button {
+  margin-top: 20px;
+  padding: 13px 20px;
+  background: #171717;
+  color: white;
+}
+
+.download-button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.benefits {
+  background: #f7f7f9;
+}
+
+.benefits-grid,
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.benefit,
+.step {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.benefit-icon {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.benefit p,
+.step p {
+  color: #666;
+}
+
+.step span {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #6c4cff;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.faq-list {
+  max-width: 750px;
+  margin: 30px auto 0;
+}
+
+details {
+  border-bottom: 1px solid #ddd;
+  padding: 18px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details p {
+  color: #666;
+  margin-top: 10px;
+}
+
+footer {
+  background: #171717;
+  color: #aaa;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+}
+
+@media (max-width: 750px) {
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .generator-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .benefits-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .qr-container {
+    min-width: 240px;
+  }
+}
